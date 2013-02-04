@@ -2,7 +2,7 @@
 
 = DESCRIPTION:
 
-This is the official Opscode Knife plugin for EC2. This plugin gives knife the ability to create, bootstrap, and manage EC2 instances.
+This is a patched version of the official Opscode Knife plugin for EC2. This plugin gives knife the ability to create, bootstrap, and manage EC2 instances. The patch adds the --node-name-prefix option, which will make the server's node name be the prefix provided plus the ec2 instance id. Convenient when you're running multiple copies of the same roles and want to be able to differentiate them and also make sure you're always working with the correct instance.
 
 = INSTALLATION:
 
