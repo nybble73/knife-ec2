@@ -453,6 +453,8 @@ class Chef
           return "#{ locate_config_value(:chef_node_name_prefix) }#{ server.id }"
         else 
           return locate_config_value(:chef_node_name) || server.id
+        end
+      end
 
       def wait_for_sshd(hostname)
         config[:ssh_gateway] ? wait_for_tunnelled_sshd(hostname) : wait_for_direct_sshd(hostname, config[:ssh_port])
